@@ -21,10 +21,10 @@ import {
 import { OrderForm } from "@/components/OrderForm";
 import { buildWhatsAppLink, DEFAULT_ORDER_MESSAGE } from "@/config/site";
 
-import heroPouch from "@/assets/hero-pouch.jpg";
+import heroPouch from "@/assets/hero-pouch-fr.png";
 import bowlPowder from "@/assets/bowl-powder.jpg";
 import leaves from "@/assets/leaves.jpg";
-import usageImg from "@/assets/usage.jpg";
+import usageImg from "@/assets/usage-fr.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({

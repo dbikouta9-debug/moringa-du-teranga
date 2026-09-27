@@ -1,6 +1,6 @@
 // Numéro WhatsApp au format international, sans "+" ni espaces.
 // Ex. Congo Brazzaville : 242061234567
-export const WHATSAPP_NUMBER = "242000000000";
+export const WHATSAPP_NUMBER = "242066456609";
 
 export const PRODUCT = {
   name: "Poudre de Moringa Oleifera",
