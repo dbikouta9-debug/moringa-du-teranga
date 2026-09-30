@@ -7,10 +7,9 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
-  // GitHub Pages sert le site sous /moringa-du-teranga/ : toutes les URLs
-  // d'assets statiques doivent être préfixées par ce chemin de base.
-  base: "/moringa-du-teranga/",
   vite: {
+    // GitHub Pages sert le site sous /moringa-du-teranga/ : toutes les URLs
+    // d'assets statiques doivent être préfixées par ce chemin de base.
     base: "/moringa-du-teranga/",
   },
   tanstackStart: {
