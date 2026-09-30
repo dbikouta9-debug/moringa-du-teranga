@@ -77,14 +77,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Moringa Oleifera de la Teranga – Poudre de Moringa au Congo Brazzaville" },
+      {
+        name: "description",
+        content:
+          "Poudre de Moringa Oleifera, sachet de 90 g à 3 300 F CFA au Congo Brazzaville. Commande rapide sur WhatsApp.",
+      },
+      { property: "og:title", content: "Moringa Oleifera de la Teranga" },
+      {
+        property: "og:description",
+        content:
+          "Poudre de Moringa Oleifera, sachet de 90 g à 3 300 F CFA au Congo Brazzaville.",
+      },
+      { property: "og:site_name", content: "Moringa Oleifera de la Teranga" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
