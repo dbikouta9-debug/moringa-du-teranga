@@ -54,8 +54,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Dossier de sortie du build (adapter si différent, ex. dist/client)
-          path: "dist"
+          # Sortie statique du build (SPA shell) : dist/client
+          path: "dist/client"
 
   # Étape 2 : déploiement sur GitHub Pages
   deploy:
