@@ -98,7 +98,7 @@ function Index() {
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
           <a href="#accueil" className="flex items-center gap-2 font-semibold text-primary">
             <Leaf className="size-5 text-leaf" />
-            Moringa Oleifera
+            Moringa Oleifera de la Teranga
           </a>
           <nav className="hidden items-center gap-7 text-sm font-medium text-muted-foreground lg:flex">
             {NAV.map((item) => (
@@ -394,7 +394,7 @@ function Index() {
       <footer className="border-t border-border bg-background py-10">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <p className="flex items-center justify-center gap-2 font-semibold text-primary">
-            <Leaf className="size-4 text-leaf" /> Poudre de Moringa Oleifera
+            <Leaf className="size-4 text-leaf" /> Moringa Oleifera de la Teranga
           </p>
           <p className="mt-3 text-sm text-muted-foreground">
             Ce produit n'est pas un médicament et ne remplace pas une alimentation variée et
