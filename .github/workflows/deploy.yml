@@ -48,6 +48,11 @@ jobs:
       - name: Build
         run: bun run build
 
+      # Copie de secours : GitHub Pages affiche 404.html pour toute URL inconnue,
+      # ce qui permet au site de se charger même après un rafraîchissement.
+      - name: SPA fallback
+        run: cp dist/client/index.html dist/client/404.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
