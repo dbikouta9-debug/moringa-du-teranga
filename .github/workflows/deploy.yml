@@ -48,10 +48,20 @@ jobs:
       - name: Build
         run: bun run build
 
-      # Copie de secours : GitHub Pages affiche 404.html pour toute URL inconnue,
-      # ce qui permet au site de se charger même après un rafraîchissement.
-      - name: SPA fallback
-        run: cp dist/client/index.html dist/client/404.html
+      # Le dossier de sortie dépend de l'environnement : .output/public sur GitHub,
+      # dist/client ailleurs. On copie celui qui contient index.html dans _site.
+      # La copie 404.html permet au site de se charger même après un rafraîchissement.
+      - name: Prepare static site
+        run: |
+          if [ -f .output/public/index.html ]; then OUT=.output/public;
+          elif [ -f dist/client/index.html ]; then OUT=dist/client;
+          else echo "index.html introuvable"; find . -name index.html -not -path './node_modules/*'; exit 1; fi
+          echo "Dossier de sortie : $OUT"
+          mkdir -p _site
+          cp -r "$OUT"/. _site/
+          cp _site/index.html _site/404.html
+          touch _site/.nojekyll
+          ls -la _site
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -59,8 +69,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Sortie statique du build (SPA shell) : dist/client
-          path: "dist/client"
+          path: "_site"
 
   # Étape 2 : déploiement sur GitHub Pages
   deploy:
