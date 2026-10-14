@@ -8,3 +8,4 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+- Vite base is '/moringa-du-teranga/' only when GITHUB_ACTIONS=true; Lovable hosting serves at '/' and breaks images otherwise.

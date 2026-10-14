@@ -8,9 +8,9 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   vite: {
-    // GitHub Pages sert le site sous /moringa-du-teranga/ : toutes les URLs
-    // d'assets statiques doivent être préfixées par ce chemin de base.
-    base: "/moringa-du-teranga/",
+    // GitHub Pages sert le site sous /moringa-du-teranga/ : ce préfixe n'est
+    // appliqué que lors du build GitHub Actions. Lovable sert le site à la racine.
+    base: process.env.GITHUB_ACTIONS === "true" ? "/moringa-du-teranga/" : "/",
   },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
