@@ -374,6 +374,10 @@ function Index() {
       <section className="hero-surface py-16 text-cream lg:py-20">
         <div className="mx-auto max-w-3xl px-4 text-center">
           <h2 className="text-3xl font-semibold sm:text-4xl">Passez votre commande aujourd'hui</h2>
+          <p className="mt-4 text-base text-cream/80">
+            Votre correspondant :{" "}
+            <span className="font-semibold text-gold">Ghislain Valery BIKOUTA</span>
+          </p>
           <p className="mt-4 text-cream/80">
             Poudre de Moringa Oleifera – sachet de 90 g à{" "}
             <span className="font-semibold text-gold">3 300 F CFA</span>.

@@ -10,7 +10,7 @@ export default defineConfig({
   vite: {
     // GitHub Pages sert le site sous /moringa-du-teranga/ : ce préfixe n'est
     // appliqué que lors du build GitHub Actions. Lovable sert le site à la racine.
-    base: process.env.GITHUB_ACTIONS === "true" ? "/moringa-du-teranga/" : "/",
+    base: process.env["GITHUB_ACTIONS"] === "true" ? "/moringa-du-teranga/" : "/",
   },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
